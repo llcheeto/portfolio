@@ -1,9 +1,14 @@
+@import "../../global.scss";
+
 .works {
     background-color: crimson;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    @include mobile{
+        overflow: hidden;
+    }
 
     .arrow{
         height: 50px;
@@ -18,7 +23,11 @@
            right: 100px;
 
         }
+    
 
+        @include mobile{
+            display: none;
+        }
     }
 
 
@@ -28,6 +37,14 @@
         position: absolute;
         left: 0;
         transition: all 1s ease-out;
+
+        @include mobile{
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            
+        
+        }   
 
         
         .container{
@@ -45,6 +62,12 @@
                 align-items: center;
                 justify-content: center;
 
+                @include mobile{
+                    width: 85%;
+                    height: 250px;
+                    margin: 15px 2px;
+                    
+            }
                 .left{
                     flex: 4;
                     height: 100%;
@@ -75,10 +98,18 @@
                         }
                         h2{
                           font-size: 25px;
+                          
+                          @include mobile{
+                            font-size: 16px;
+                        }
                             
                         }
                         p{
-                            font-size: 14px;
+                            font-size: 12px;
+
+                            @include mobile{
+                                font-size: 14px;
+                            }
                         }
                         span{
                             font-size: 14px;
