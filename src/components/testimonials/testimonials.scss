@@ -24,6 +24,17 @@
             flex-direction: column;
             justify-content: space-around;
             padding: 20px;
+            transition: all 1s ease;
+
+            &.featured{
+                width: 300px;
+                height: 75%;
+                margin: 0px 30px;
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
 
             .top{
                 display: flex;
@@ -38,13 +49,21 @@
                         object-fit: cover;
                         margin: 0 30px;
                     }
+                    &.user{
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin: 0px 30px,
+                    }
+
                 }
                 
                 
             }
             .center {
                 padding:10px;
-                background-color: rgb(238, 215, 220);
+                background-color: rgb(255, 255, 255);
             }
         }   
         .bottom {
