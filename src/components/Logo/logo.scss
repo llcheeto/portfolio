@@ -1,0 +1,63 @@
+@import "../../global.scss";
+
+.logo-container {
+  z-index: 9999;
+  width: 400px;
+  height: 620px;
+  position: absolute;
+  top: 200px;
+  right: 65%;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+  overflow: hidden;
+
+  @include mobile {
+    width: 30vh;
+    height: 60vh;
+    bottom: 30vh;
+    left: 10%;
+    transform: rotateZ(10deg) !important;
+}
+
+
+  svg {
+    width: 98%;
+    height: 98%;
+    bottom: 0;
+    transform: rotateZ(10deg) !important;
+
+
+    @include mobile {
+      display: none;
+      
+    }
+  }  
+
+  
+
+
+  .solid-logo {
+    position: absolute;
+    top: auto;
+    right: auto;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    transform: rotateZ(10deg);
+    z-index: 99999;
+  } 
+  
+  
+  .svg-container {
+    stroke: rgb(0, 0, 0);
+    stroke-width: 10px;
+    
+   
+
+  }
+  }
+  
+
+

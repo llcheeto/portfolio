@@ -1,6 +1,9 @@
+import { gsap } from "gsap";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import './intro.scss';
 import { init } from 'ityped';
 import { useEffect, useRef } from 'react';
+import Logo from "../Logo/Logo";
 
 export default function Intro() {
     const textRef = useRef();
@@ -17,8 +20,9 @@ export default function Intro() {
     return (
         <div className="intro" id="intro">
             <div className="left">
+                <Logo/>
                 <div className="imgContainter">
-                    <img src="assets/man.png" alt=""></img>
+                    <img src="" alt=""></img>
                 </div>
             </div>
             <div className="right">
