@@ -1,14 +1,31 @@
-import {useState ,React} from 'react'
-import './contact.scss'
+import {useState ,React, useRef} from 'react';
+import './contact.scss';
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-    const [message, setMessage] = useState(false)
-
-
-    const handleSubmit = (e)=>{
+    
+    const refForm = useRef();
+    
+    const sendEmail = (e) => {
         e.preventDefault();
-        setMessage(true);
-    }
+    
+        emailjs
+          .sendForm(
+            "service_vd2ap5s",
+            "template_q5ylkf7",
+            refForm.current,
+            "uMKyzFshbaKawx7fJ"
+          )
+          .then(
+            () => {
+              alert("Message Successfully Sent!");
+              window.location.reload(false);
+            },
+            () => {
+              alert("Faled to send the message, Please try again!");
+            }
+          );
+      };
     return (
         <div className="contact" id="contact">
             <div className="left">
@@ -16,11 +33,10 @@ export default function Contact() {
             </div>
             <div className="right">
                 <h2>Contact</h2>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="Email"></input>
-                    <textarea placeholder="Message"></textarea> 
-                    <button type="submit">Send</button>  
-                    {message && <span>Thanks, I'll respond shortly</span>}       
+                <form ref={refForm} onSubmit={sendEmail}>
+                    <input type="text" placeholder="Email" required></input>
+                    <textarea placeholder="Message" required></textarea> 
+                    <button type="submit" value="SEND">Send</button>        
                 </form>
             </div>
         </div>

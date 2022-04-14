@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .logo-container {
-  z-index: 9999;
+  z-index: 0;
   width: 400px;
   height: 620px;
   position: absolute;
@@ -46,7 +46,7 @@
     width: 100%;
     opacity: 0;
     transform: rotateZ(10deg);
-    z-index: 99999;
+    z-index: 1;
   } 
   
   

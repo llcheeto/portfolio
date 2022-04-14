@@ -22,7 +22,7 @@ export default function Intro() {
             <div className="left">
                 <Logo/>
                 <div className="imgContainter">
-                    <img src="" alt=""></img>
+                    <img src="src/assets/images/Feathers.png" alt=""></img>
                 </div>
             </div>
             <div className="right">
