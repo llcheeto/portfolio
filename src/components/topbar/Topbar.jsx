@@ -1,7 +1,7 @@
 import './topbar.scss'
 import React from 'react';
 import {Person, Mail} from "@material-ui/icons";
-
+import topLogo from '../../assets/images/topLogo.png';
 
 export default function Topbar( {menuOpen, setMenuOpen}) {
     return (
@@ -9,7 +9,7 @@ export default function Topbar( {menuOpen, setMenuOpen}) {
             <div className="wrapper">
                 <div className="left">
                     <a href="#intro" className="logo">
-                        Genius.
+                        <img src={topLogo} alt="logo" />
                     </a>
                     <div className="itemContainer">
                         <Person className="icon" />

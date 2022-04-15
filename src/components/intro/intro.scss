@@ -15,10 +15,9 @@
         overflow: hidden;
         
         .imgContainter{
+            position: relative;
             width: 900px;
             height: 900px;
-            background-color: #9a9294;
-            border-top-right-radius: 90%;
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -26,14 +25,9 @@
 
             @include mobile {
                 align-items: flex-start;
-            }
-
-            img{
-                height: 90%;
-
-
-                @include mobile {
-                    height: 50%;
+                bottom: 10%;
+                .logo-container{
+                    left: 20%;
                 }
             }
         }

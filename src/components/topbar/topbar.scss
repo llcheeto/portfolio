@@ -9,6 +9,7 @@
     top: 0;
     z-index: 3;
     transition: all 2s ease;
+    overflow: hidden;
 
     .wrapper{
         padding: 10px 30px;
@@ -23,11 +24,11 @@
 
            
             .logo{
-                color: inherit !important;
-                font-size: 40px;
-                font-weight: 700;
-                text-decoration: none;
-                margin-right: 40px;
+                height: 59px;
+                width: 80px;
+                display: flex;
+
+
             }
             
             .itemContainer {
@@ -61,7 +62,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;
-                overflow: hidde;
+                overflow: hidden;
             
                 span {
                     width: 100%;

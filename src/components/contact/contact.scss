@@ -8,7 +8,7 @@
         flex-direction: column;
     }
 
-
+    
     .left{
         flex: 1;
         overflow: hidden;
@@ -24,6 +24,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 100%;
 
         @include mobile{
             margin:  10px;  
@@ -34,58 +35,40 @@
             color: white;
         }
     
-        form{
-            width: 70%;
-            height: 40%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-
-
-
-            input{
-                width: 300px;
-                height: 30px;
-                font-size: 14px;
-                
-                @include mobile{
-                  width: 300px;
-                  height: 25px;
-                  margin: 5px;  
-                }
-            }
-
-            textarea{
-                width: 300px;
-                height: 200px;
-                font-size: 14px;
-
-                @include mobile{
-                    width: 300px;
-                    height: 80px;  
-                  }
-            }
-
-            button{
-                width: 150px;
-                height: 30px;
-                color: white;
-                background-color: crimson;
-                border: none;
-                border-radius: 10px;
-                font-weight: 500;
-                cursor: pointer;
-
-                &:focus{
-                    outline: none;
-                }
-            
-            }
-            
-            span{
-                color:  black;
-            }
-        }
     }
+
+    input[type='text'],
+    input[type='email'] {
+        width: 100%;
+        border: 0;
+        background: #115173;
+        height: 50px;
+        font-size: 16px;
+        color: #fff;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        width: 100%;
+        border: 0;
+        background: #115173;
+        height: 50px;
+        font-size: 16px;
+        color: #fff;
+        padding: 20px;
+        min-height: 150px;
+
+    }
+    .flat-button {
+        color: crimson;
+        background: 0, 0;
+        font: 11px;
+        letter-spacing: 3px;
+        text-decoration: none;
+        padding: 8px 10px;
+        border: 1px solid crimson;
+        float: right;
+        border-radius: 4px; 
+        }
 }

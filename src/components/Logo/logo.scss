@@ -3,33 +3,34 @@
 .logo-container {
   z-index: 0;
   width: 400px;
-  height: 620px;
+  height: 500px;
   position: absolute;
-  top: 200px;
-  right: 65%;
+  top: 10px;
   bottom: 0;
   left: auto;
   margin: auto;
+  opacity: 1;
   overflow: hidden;
 
   @include mobile {
-    width: 30vh;
-    height: 60vh;
-    bottom: 30vh;
-    left: 10%;
-    transform: rotateZ(10deg) !important;
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    
+    
 }
 
 
   svg {
-    width: 98%;
-    height: 98%;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 10%;
     transform: rotateZ(10deg) !important;
 
 
     @include mobile {
-      display: none;
+      
+      transform: none;
       
     }
   }  
@@ -41,23 +42,24 @@
     position: absolute;
     top: auto;
     right: auto;
+    bottom: auto;
     left: 0;
     margin: auto;
     width: 100%;
-    opacity: 0;
+    opacity: 1;
     transform: rotateZ(10deg);
-    z-index: 1;
+    z-index: 3;
   } 
   
   
   .svg-container {
-    stroke: rgb(0, 0, 0);
+    stroke: black;
     stroke-width: 10px;
     
    
 
   }
-  }
+}
   
 
 

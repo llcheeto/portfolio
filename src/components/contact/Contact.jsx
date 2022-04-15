@@ -1,11 +1,12 @@
-import {useState ,React, useRef} from 'react';
-import './contact.scss';
+import {useState ,React, useRef} from 'react'
+import './contact.scss'
 import emailjs from "@emailjs/browser";
+import Feathers from '/home/llcheeto/portfolio/src/assets/images/Feathers.png'
 
 export default function Contact() {
-    
+    const [message, setMessage] = useState(false)
     const refForm = useRef();
-    
+
     const sendEmail = (e) => {
         e.preventDefault();
     
@@ -26,18 +27,43 @@ export default function Contact() {
             }
           );
       };
+
     return (
         <div className="contact" id="contact">
             <div className="left">
-                <img src="assets/code.jpg" alt="code" />
+                <img src={Feathers} alt="code" />
             </div>
             <div className="right">
                 <h2>Contact</h2>
                 <form ref={refForm} onSubmit={sendEmail}>
-                    <input type="text" placeholder="Email" required></input>
-                    <textarea placeholder="Message" required></textarea> 
-                    <button type="submit" value="SEND">Send</button>        
-                </form>
+              <ul>
+                <li className="half">
+                  <input type="text" name="name" placeholder="Name" required />
+                </li>
+                <li className="half">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </li>
+                <li>
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                </li>
+                <li>
+                  <textarea name="message" placeholder="Message" required />
+                </li>
+                <li>
+                  <input className="flat-button" type="submit" value="SEND" />
+                </li>
+              </ul>
+            </form>
             </div>
         </div>
     );

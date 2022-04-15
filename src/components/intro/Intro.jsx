@@ -19,12 +19,14 @@ export default function Intro() {
     
     return (
         <div className="intro" id="intro">
+      
             <div className="left">
-                <Logo/>
                 <div className="imgContainter">
-                    <img src="src/assets/images/Feathers.png" alt=""></img>
-                </div>
+                
+             <Logo/>
+             </div>   
             </div>
+    
             <div className="right">
                 <div className="wrapper">
                     <h2>Hi There, I'm </h2>
